@@ -1,3 +1,4 @@
+using DataAccess.Concrete.EntityFramework.Context;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -6,6 +7,8 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+         SimpleContextDb context = new SimpleContextDb();
+
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -21,6 +24,9 @@ namespace WebAPI.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            context.Users.ToList();
+
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
