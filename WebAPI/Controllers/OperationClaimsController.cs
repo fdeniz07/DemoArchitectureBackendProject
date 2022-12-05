@@ -1,0 +1,13 @@
+﻿using Business.Abstract;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace WebAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OperationClaimsController : ControllerBase
+    {
+        private readonly IOperationClaimService _operationClaimService;
+    }
+}
