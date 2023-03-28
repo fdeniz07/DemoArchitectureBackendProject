@@ -5,7 +5,8 @@
     using Core.DataAccess.EntityFramework;
     using Entities.Concrete;
 
-    public class EfUserOperationClaimDal : EfEntityRepositoryBase<UserOperationClaim, SimpleContextDb>, IUserOperationClaimDal
+    public class EfOperationClaimDal : EfEntityRepositoryBase<OperationClaim, PostgreDbContext>, IOperationClaimDal
     {
+       
     }
 }

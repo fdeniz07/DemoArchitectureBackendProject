@@ -7,7 +7,8 @@
     public class OperationClaimManager : IOperationClaimService
     {
         private readonly IOperationClaimDal _operationClaimDal;
-
+        
+        
 
         public OperationClaimManager(IOperationClaimDal operationClaimDal)
         {

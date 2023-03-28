@@ -7,7 +7,7 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-         SimpleContextDb context = new SimpleContextDb();
+         PostgreDbContext context = new PostgreDbContext();
 
         private static readonly string[] Summaries = new[]
         {
