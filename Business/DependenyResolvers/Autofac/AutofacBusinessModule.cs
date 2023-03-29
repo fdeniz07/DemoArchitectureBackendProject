@@ -2,7 +2,7 @@
 {
     using Abstract;
     using Concrete;
-    using DataAccess.Abstract;
+    using DataAccess.Abstract.Repositories;
     using DataAccess.Concrete.EntityFramework;
     using global::Autofac;
 
